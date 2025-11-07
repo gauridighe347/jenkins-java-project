@@ -57,7 +57,7 @@ pipeline {
             steps {
               sh """
                  echo "---------------Building Docker Image-----------"
-                 docker build -t myjavaapp:"${App_Version}" .
+                 docker build -t priya123456/myjavaapp:"${App_Version}" .
                  echo "---------------Completed Pusing Docker Image-----------"
                  """
            }  

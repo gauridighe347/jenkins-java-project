@@ -41,6 +41,13 @@ pipeline {
               
            }  
       }
+
+
+      stage('Acceptance'){
+            steps {
+              input 'Proceed'             
+           }  
+      }
     
     }
 }   

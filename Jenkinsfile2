@@ -8,16 +8,50 @@ stages{
            ls -l
            """
       }
-}
- stage("Building the application"){
-     steps {
-          sh """
-           echo "=======Building the application========"
-           mvn clean package
-           echo "========building the java application completed========"
-          """
-           }
-      }
-  }
+   }
 
-}
+stage("Building the application"){
+     steps {
+         sh """
+           echo "========Building Java Application============"
+           mvn clean package
+           echo "======Building Java Application completed====="
+         """      
+      }
+   }
+
+
+
+stage("Testing the application"){
+     steps {
+         sh """
+           echo "========Testing Java Application============"
+           mvn test
+           echo "====== Testing Java Application completed====="
+         """      
+      }
+   }
+
+
+stage("Testing the application"){
+     steps {
+         sh """
+           echo "========Testing Java Application============"
+           mvn test
+           echo "====== Testing Java Application completed====="
+         """      
+      }
+   }
+stage("Building the Docker Image"){
+     steps {
+         sh """
+           echo "========Building the Docker Image ============"
+           
+           echo "====== Building Image Completed ====="
+         """      
+      }
+   }
+
+} // end of stages
+
+} // end of pipeline
